@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hospital_manament.HRbtSceneController">
+   <children>
+      <Button layoutX="320.0" layoutY="461.0" mnemonicParsing="false" onAction="#backMethod" prefHeight="26.0" prefWidth="160.0" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Back">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <TableView fx:id="tv" layoutX="2.0" layoutY="60.0" prefHeight="390.0" prefWidth="796.0">
+        <columns>
+          <TableColumn fx:id="nameCol" prefWidth="123.20004272460938" text="Name" />
+          <TableColumn fx:id="mailCol" prefWidth="117.59994506835938" text="E-mail" />
+            <TableColumn fx:id="bgCol" prefWidth="32.800048828125" text="BG" />
+            <TableColumn fx:id="ageCol" prefWidth="33.59991455078125" text="Age" />
+            <TableColumn fx:id="recoCol" prefWidth="50.4000244140625" text="Recover" />
+            <TableColumn fx:id="sideEffeCol" prefWidth="75.20001220703125" text="Side-Effect" />
+            <TableColumn fx:id="sufeEffeDetaCol" prefWidth="359.20001220703125" text="Side-Effect in Details" />
+        </columns>
+      </TableView>
+      <Label alignment="CENTER" layoutX="41.0" layoutY="14.0" prefHeight="30.0" prefWidth="718.0" style="-fx-border-color: green;" text="Health Report that Patients are sharing After taking Prescribed Medicine By Doctor">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

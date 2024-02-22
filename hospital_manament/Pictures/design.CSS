@@ -1,0 +1,23 @@
+.login{
+-fx-background-radius: 30;
+}
+
+.button:hover{
+-fx-background-color: white;
+-fx-background-radius: 22;
+-fx-text-fill: black;
+-fx-border-color: #fcbe03;
+-fx-border-radius: 20;
+-fx-border-width: 3;
+
+}
+
+.button1:pressed {
+-fx-background-color: white;
+-fx-background-radius: 22;
+-fx-text-fill: black;
+-fx-border-color: #fcbe03;
+-fx-border-radius: 20;
+-fx-border-width: 3;
+-fx-rotate: 10;
+}

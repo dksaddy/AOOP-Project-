@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hospital_manament.PatientAccRegController">
+   <children>
+      <Label alignment="CENTER" prefHeight="46.0" prefWidth="800.0" style="-fx-background-color: #F2142C;" text="Patient's Registration Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="62.0" layoutY="93.0" />
+      <Button fx:id="registerBt" layoutX="231.0" layoutY="447.0" mnemonicParsing="false" onAction="#registerMethod" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #536DEE;" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Register" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button fx:id="cancelBt" layoutX="446.0" layoutY="447.0" mnemonicParsing="false" onAction="#cancelMethod" prefHeight="30.0" prefWidth="122.0" style="-fx-background-color: #F70B24;" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Label fx:id="status" alignment="CENTER" layoutX="207.0" layoutY="398.0" prefHeight="30.0" prefWidth="410.0" textFill="#ea0d39">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="81.0" prefHeight="20.0" prefWidth="70.0" text="Name">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="121.0" prefHeight="20.0" prefWidth="98.0" text="Date of Birth">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="161.0" prefHeight="20.0" prefWidth="91.0" text="Blood Group">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="201.0" prefHeight="20.0" prefWidth="70.0" text="Gender">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="241.0" prefHeight="20.0" prefWidth="70.0" text="Address">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="303.0" prefHeight="20.0" prefWidth="149.0" text="Phone No.">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="481.0" layoutY="303.0" prefHeight="20.0" prefWidth="43.0" text="Email">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="17.0" layoutY="360.0" prefHeight="20.0" prefWidth="157.0" text="Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="400.0" layoutY="361.0" prefHeight="20.0" prefWidth="122.0" text="Confirm Password">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="fullName" layoutX="130.0" layoutY="78.0" prefHeight="26.0" prefWidth="338.0" promptText="ex. Md. Sadik">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="dob" editable="false" layoutX="129.0" layoutY="118.0" prefHeight="26.0" prefWidth="338.0" promptText="Date of Birth" />
+      <ComboBox fx:id="bloodGroup" layoutX="129.0" layoutY="158.0" prefHeight="26.0" prefWidth="338.0" promptText="Blood Group" />
+      <ComboBox fx:id="gender" layoutX="130.0" layoutY="198.0" prefHeight="26.0" prefWidth="338.0" promptText="Gender" />
+      <TextField fx:id="address" layoutX="130.0" layoutY="238.0" prefHeight="26.0" prefWidth="338.0" promptText="Full Address">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phoneNo" layoutX="129.0" layoutY="300.0" prefHeight="26.0" prefWidth="243.0" promptText="01XXX-XXXXXX">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="email" layoutX="526.0" layoutY="300.0" prefHeight="26.0" prefWidth="243.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="password" layoutX="129.0" layoutY="357.0" prefHeight="26.0" prefWidth="243.0" promptText="Atleast 6 Character">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="confirmPassword" layoutX="526.0" layoutY="357.0" prefHeight="26.0" prefWidth="243.0" promptText="Retype">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </TextField>
+      <ImageView fitHeight="204.0" fitWidth="292.0" layoutX="497.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Pictures/patientReg.png" />
+         </image>
+      </ImageView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>

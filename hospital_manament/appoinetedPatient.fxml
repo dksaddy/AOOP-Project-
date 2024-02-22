@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hospital_manament.APSbtSceneController">
+   <children>
+      <TableView fx:id="tv" layoutX="3.0" layoutY="5.0" prefHeight="308.0" prefWidth="794.0">
+        <columns>
+          <TableColumn fx:id="AppoName" prefWidth="168.79998779296875" text="Name" />
+          <TableColumn fx:id="AppoMail" prefWidth="176.0" text="E-mail" />
+            <TableColumn fx:id="AppoHealthIssue" prefWidth="200.0" text="Health Issue" />
+            <TableColumn fx:id="AppoPM" prefWidth="206.4000244140625" text="Prescribed Medicne" />
+            <TableColumn fx:id="AppoBill" minWidth="0.0" prefWidth="43.2000732421875" text="Bills" />
+        </columns>
+      </TableView>
+      <HBox layoutX="4.0" layoutY="317.0" prefHeight="179.0" prefWidth="794.0" style="-fx-background-color: #d9ead3;">
+         <children>
+            <TextArea fx:id="prescription" prefHeight="179.0" prefWidth="286.0" promptText="Write Prescription OR Necessary Test" wrapText="true">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </TextArea>
+            <VBox prefHeight="158.0" prefWidth="508.0">
+               <children>
+                  <Label fx:id="status" alignment="CENTER" prefHeight="30.0" prefWidth="508.0" text="Label">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox prefHeight="146.0" prefWidth="508.0">
+                     <children>
+                        <VBox prefHeight="155.0" prefWidth="245.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#updateMethod" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: blue;" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Update Medicine" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="35.0" right="30.0" top="35.0" />
+                                 </VBox.margin>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#clearMethod" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #F8612D;" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Clear Prescription" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets left="35.0" right="30.0" top="35.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </VBox>
+                        <VBox prefHeight="155.0" prefWidth="245.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#sendPresMethod" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #3AF82D;" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Send Prrescription">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets left="35.0" right="30.0" top="35.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" onAction="#backMethod" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #F8612D;" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Back Page" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets left="35.0" right="30.0" top="35.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

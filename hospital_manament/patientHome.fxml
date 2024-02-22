@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hospital_manament.PatientHomeController">
+   <children>
+      <VBox layoutX="1.0" layoutY="1.0" prefHeight="498.0" prefWidth="212.0" style="-fx-background-color: Black;">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="246.0" style="-fx-border-color: white;" text="MENU" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <Button fx:id="AFbt" mnemonicParsing="false" onAction="#AFmethod" prefHeight="40.0" prefWidth="200.0" text="Appointment Form">
+               <VBox.margin>
+                  <Insets left="6.0" top="35.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button1" />
+                  <String fx:value="log" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@Pictures/design.CSS" />
+                  <URL value="@Pictures/des2.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="BIBbt" mnemonicParsing="false" onAction="#BIBmethod" prefHeight="39.0" prefWidth="200.0" text="Bed &amp; ICU Booking">
+               <VBox.margin>
+                  <Insets left="6.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button1" />
+                  <String fx:value="log" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@Pictures/design.CSS" />
+                  <URL value="@Pictures/des2.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="HCbt" mnemonicParsing="false" onAction="#HCmethod" prefHeight="37.0" prefWidth="200.0" text="Health Condition">
+               <VBox.margin>
+                  <Insets left="6.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button1" />
+                  <String fx:value="log" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@Pictures/design.CSS" />
+                  <URL value="@Pictures/des2.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="CAbt" mnemonicParsing="false" onAction="#CAmethod" prefHeight="39.0" prefWidth="200.0" text="Call Ambulance">
+               <VBox.margin>
+                  <Insets left="6.0" top="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button1" />
+                  <String fx:value="log" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@Pictures/design.CSS" />
+                  <URL value="@Pictures/des2.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="PBbt" mnemonicParsing="false" onAction="#PBmethod" prefHeight="40.0" prefWidth="200.0" text="Payment &amp; Bils">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="6.0" top="30.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <styleClass>
+                  <String fx:value="button1" />
+                  <String fx:value="log" />
+               </styleClass>
+               <stylesheets>
+                  <URL value="@Pictures/design.CSS" />
+                  <URL value="@Pictures/des2.css" />
+               </stylesheets>
+            </Button>
+            <Button fx:id="logoutBt" mnemonicParsing="false" onAction="#logoutMethod" prefHeight="30.0" prefWidth="151.0" styleClass="button1" stylesheets="@Pictures/design.CSS" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" top="55.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="215.0" layoutY="1.0" prefHeight="498.0" prefWidth="301.0" style="-fx-background-color: Black;">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="367.0" style="-fx-border-color: white;" text="My Profile" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Name">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="n" text="Name">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="E-mail">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="e" text="E-mail">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Phone">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="p" text="Phone">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="55.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Address">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="a" text="Address">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="40.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="25.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Gender">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="g" text="Gender">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="45.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Blood Group">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="bg" text="Blood Group">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Date of Birth">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="dob" text="Date of Birth">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="40.0" prefWidth="323.0" style="-fx-background-color: white;">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <children>
+                  <Label text="Age">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="age" text="Age">
+                     <font>
+                        <Font name="System Bold Italic" size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="65.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="519.0" layoutY="1.0" prefHeight="498.0" prefWidth="280.0" style="-fx-background-color: Black;">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="288.0" style="-fx-border-color: white;" text="Service Tracer" textFill="WHITE">
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="10.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label text="Appointment Status" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="apooint" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Observing Status" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="runnig" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Ambulance Status" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="ambulance" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Bed &amp; ICU Status:" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label fx:id="bedIcu" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="For Payment &amp; Bills:Status : " textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="30.0" />
+               </VBox.margin>
+            </Label>
+            <Label text="Click &quot;Payment &amp; Bills&quot; ." textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+               <VBox.margin>
+                  <Insets left="5.0" right="5.0" top="5.0" />
+               </VBox.margin>
+            </Label>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
